@@ -1,0 +1,35 @@
+{
+  "skill": "palm-off",
+  "test_cases": [
+    {
+      "name": "voice_notes_newsletter",
+      "input": "palm this off: a tool that turns voice notes into a weekly newsletter",
+      "assertions": [
+        "writes PLAN.md with a 7-day sequence and one growth lever",
+        "creates a private GitHub repo and pushes PLAN.md README.md docs/GROWTH.md docs/REVIEW.md",
+        "creates exactly one daily automation that picks one growth action",
+        "creates exactly one Monday weekly review reminder",
+        "returns repo URL and both task ids"
+      ]
+    },
+    {
+      "name": "derive_slug_no_extra_questions",
+      "input": "palm-off: local cafe loyalty stamps as a phone link, no app install",
+      "assertions": [
+        "derives a kebab-case slug without asking for a name",
+        "defaults private true and timezone Pacific/Auckland",
+        "does not ask a clarifying question",
+        "names the first daily action in the reply"
+      ]
+    },
+    {
+      "name": "github_missing_stops_before_cron",
+      "input": "plan and git push a repo for a plant watering log, then set the daily and weekly crons",
+      "assertions": [
+        "if GitHub tools are absent, stops after the local plan",
+        "requests GitHub auth",
+        "does not create automations that point at a missing repo"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "skill": "palm-off",
+  "test_cases": [
+    {"input": "palm this off and push a new repo", "should_trigger": true},
+    {"input": "palm-off: plan it, git push, daily growth cron, weekly review", "should_trigger": true},
+    {"input": "set a daily cron that picks one action that grows the project and a weekly review reminder", "should_trigger": true},
+    {"input": "/plan this idea then git push a new repo", "should_trigger": true},
+    {"input": "write a LinkedIn post about our launch", "should_trigger": false},
+    {"input": "explain git rebase", "should_trigger": false},
+    {"input": "what's the weather in Auckland", "should_trigger": false}
+  ]
+}
